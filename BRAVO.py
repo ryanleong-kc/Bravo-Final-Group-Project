@@ -13,7 +13,7 @@ def fortune_teller():
 print("""
  -------------------------------
 |        FORTUNE TELLER         |
-|                               |
+|            by Bravo           |
  -------------------------------
       """)
 fortune_teller()
