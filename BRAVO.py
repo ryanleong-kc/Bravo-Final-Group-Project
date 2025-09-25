@@ -5,12 +5,4 @@ def fortune_teller():
   name = input("Please enter your name:")
   print(f"Hello {name}, press Enter to receive your fortune
 
-  fortunes = [
-    "Expect good news in the near future."
-
-
-
-
-
-
-]
+  fortunes = ["Expect good news in the near future."]
