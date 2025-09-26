@@ -14,10 +14,27 @@ def fortune_teller():
   print("Please enter your :-")
   name = input("Name :")
   birthday = input("Birthday (DD/MM/YYYY) : ")
-  print(f"Hello {name}, press Enter to receive your fortune")
+  print(f"\nHello {name}, press Enter to receive your fortune")
+  rand_num = random.randint(0,12)
 
-  fortunes = ["Expect good news in the near future."]
-  print("Your lucky age : " + sum_date(birthday))
+  list_fortunes = [
+    "Expect good news in the near future.",
+    "A journey of a thousand miles begins with a single step.",
+    "You will soon have a chance to travel to a new place.",
+    "Good things come to those who wait.",
+    "The early bird gets the worm.",
+    "Do not be afraid of the unknown, for it holds your future.",
+    "Your hard work will soon pay off.",
+    "Believe in yourself and your abilities.",
+    "An exciting opportunity is just around the corner.",
+    "A loyal friend is a great treasure.",
+    "The best way to predict the future is to create it.",
+    "Adventure is out there, find it.",
+    "You will find happiness in unexpected places."
+  ]
+  
+  print("Your fortune   : " + list_fortunes[rand_num])
+  print(f"Your lucky age : {sum_date(birthday)}")
 
 
 print("""
