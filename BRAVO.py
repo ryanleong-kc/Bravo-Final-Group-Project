@@ -9,11 +9,21 @@ def sum_date(date_string):
 
   return sum
 
+#FORTUNE TELLER FUNCTION
 def fortune_teller():
   print("Welcome to Bravo's Fortune Teller!")
   print("Please enter your :-")
   name = input("Name :")
+
   birthday = input("Birthday (DD/MM/YYYY) : ")
+  parts = birthday.split('/')
+
+  if len(parts) == 3:
+    birth_year = parts[2]
+
+  current_year = 2025
+  age = current_year - int(birth_year)
+
   print(f"\nHello {name}, press Enter to receive your fortune")
   rand_num = random.randint(0,12)
 
@@ -36,7 +46,14 @@ def fortune_teller():
   print("Your fortune   : " + list_fortunes[rand_num])
   print(f"Your lucky age : {sum_date(birthday)}")
 
+  if age >= sum_date(birthday):
+    print("How's your lucky year? :)))")
+  else:
+    print("Can't wait for it to happen ;))")
 
+
+
+#MAIN FUNCTION
 print("""
  -------------------------------
 |        FORTUNE TELLER         |
