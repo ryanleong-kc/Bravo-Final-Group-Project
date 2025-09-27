@@ -15,11 +15,15 @@ def fortune_teller():
   print("Please enter your :-")
   name = input("Name :")
 
-  birthday = input("Birthday (DD/MM/YYYY) : ")
-  parts = birthday.split('/')
+  attempt = 0
 
-  if len(parts) == 3:
-    birth_year = parts[2]
+  while attempt == 0:
+    birthday = input("Birthday (DD/MM/YYYY) : ")
+    parts = birthday.split('/')
+
+    if len(parts) == 3:
+      birth_year = parts[2]
+      attempt = 1
 
   current_year = 2025
   age = current_year - int(birth_year)
@@ -27,6 +31,8 @@ def fortune_teller():
   print(f"\nHello {name}, press Enter to receive your fortune")
   rand_num = random.randint(0,12)
 
+
+  #List of fortunes for our users
   list_fortunes = [
     "Expect good news in the near future.",
     "A journey of a thousand miles begins with a single step.",
